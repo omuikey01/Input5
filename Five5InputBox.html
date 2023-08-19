@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Input Box</title>
+    <style>
+        body{
+            width: 500px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        #box{
+            width: 500px;
+            border: 2px solid blue;
+            min-height: 50px;
+            border-radius: 10px;
+            background-color: chartreuse;
+        }
+        button{
+            padding : 10px;
+            border-radius: 10px;
+            background-color: aqua;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+        }
+        p{
+            font-weight: 700;
+        }
+        input{
+            height: 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: 1px solid;
+
+        }
+    </style>
+</head>
+<body>
+    <button onclick="callMe()">Add Input Box</button>
+    <div id="box">
+
+    </div>
+
+    <script>
+        let data, count=0, inp;
+        let callMe=()=>{
+            if(count !=5)
+            {
+                data = document.createElement("p");
+                data.innerHTML = `Enter Subjects Name : <input type="text" id="inpo"> `;
+                document.getElementById("box").appendChild(data);
+                count++;
+                
+                data.style.fontSize="20px";
+                data.style.marginLeft="10px";
+                inp = data.innerHTML("input");
+                inp.style.fontSize="50px";
+            }
+            else{
+                alert("Sorry, you can not add more input box");
+            }
+            
+        }
+    </script>
+</body>
+</html>
